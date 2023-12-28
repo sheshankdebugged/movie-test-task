@@ -1,0 +1,232 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+    background-color: #093545;
+}
+
+.cards{
+  background-color: #092C39;
+  height: 502px;
+  border-radius: 12px;
+  margin-bottom: 15px;
+  padding: 12px;
+}
+
+
+.buttonlogin {
+  width: 300px;
+  height: 45px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+}
+
+.addmovie{
+  width: 362px;
+  height: 45px;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #224957 !important;
+}
+
+.addyear{
+  width: 216px;
+  height: 45px; 
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #224957 !important;
+}
+
+.buttons{
+  margin-right: 364px;
+}
+
+.bg-image-footer img {
+  width: 100%;
+  background-color: #093545;
+}
+
+.imagemovie{
+  color: '#fff';
+  display: none;
+}
+
+.inputfields{
+  width: 300px;
+  height: 45px;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #224957;
+  color: #fff;
+}
+
+.inputtext{
+  background-color: #092C39;
+  width: 473px;
+   height: 504px;
+}
+
+.skeleton-loader {
+  display: inline-block;
+  width: 300px;
+  height: 400px;
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: loading 1.5s infinite;
+}
+
+.skeletonloader{
+  display: inline-block;
+  width: 300px;
+  height: 310px;
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: loading 1.5s infinite; 
+}
+
+
+
+
+@keyframes loading {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+.fieldinput {
+  margin-bottom: 20px; 
+}
+
+.label-container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.error-message {
+  color: red;
+}
+.cardimg{
+  height: 400px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.edittext{
+  width: 316px;
+  height: 45px;
+  padding: 10px;
+  background-color: #224957;
+  color: #fff;
+  border-radius: 10px;
+}
+.edityear{
+  height: 45px;
+  padding: 10px;
+  background-color: #224957;
+  color: #fff;
+  border-radius: 10px;
+}
+
+.navigationsec{
+  display: flex;
+  margin-top: 30px;
+  gap: 6px;
+  justify-content: center;
+}
+
+.pagenumber {
+    padding: 2px 8px 2px 8px;
+}
+
+.cardstxt{
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.deletebtn {
+    width: 300px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+
+.dragdrop {
+  width: 380px;
+  height: 450px;
+  border: 1px dashed #fff; 
+  box-sizing: border-box; 
+  border-radius: 6px;
+  background-color: #092C39;  
+}
+
+.addbtn{
+  width: 202px;
+  text-align: center;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+}
+
+.notfound{
+  justify-content: center;
+  height: 760px;
+}
+
+/* loading skeleton */
+.skeleton-loader {
+  position: relative;
+}
+
+.mymovie{
+  margin-top: 20px;
+}
+
+.publishYear {
+  width: 216px;
+}
+
+.remebercheck {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.signin{
+  padding-top: 220px;
+}
+
+.cancelbtn{
+  width: 140px;
+  text-align: center;
+}
+
+.submitbtn {
+  width: 140px;
+  text-align: center;
+}

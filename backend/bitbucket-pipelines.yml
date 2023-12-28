@@ -1,0 +1,22 @@
+#  Template NodeJS build
+
+#  This template allows you to validate your NodeJS code.
+#  The workflow allows running tests and code linting on the default branch.
+
+image: node:16
+
+pipelines:
+  branches:
+    master:
+      - step:
+          caches:
+            - node
+          script:
+            - apt-get update && apt-get install -y rsync
+            - node -v
+            - ssh-keyscan -H $SSH_HOST >> ~/.ssh/known_hosts
+            - cd $BITBUCKET_CLONE_DIR
+            - rsync -r -v -e ssh . $SSH_USER@$SSH_HOST:/home/ubuntu/test-backend-node
+            - ssh $SSH_USER@$SSH_HOST 'cd /home/ubuntu/test-backend-node && npm install --force'
+            - ssh $SSH_USER@$SSH_HOST 'cd /home/ubuntu/test-backend-node && apidoc -i ./api/controllers -o ./apidoc/doc'
+            - ssh $SSH_USER@$SSH_HOST 'pm2 restart all'

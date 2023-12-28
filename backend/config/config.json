@@ -1,0 +1,10 @@
+{
+  "development": {
+    "username": "postgres",
+    "password": "~Km9b7k32q|s",
+    "database": "test_db",
+    "host":"3.111.129.10",
+    "dialect": "postgres",
+    "operatorsAliases": false
+  }
+}
